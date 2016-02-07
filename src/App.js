@@ -1,8 +1,9 @@
 import React from "react";
 import {TodoForm} from "./todos/TodoForm";
 import {TodoList} from "./todos/TodoList";
+import uuid from "uuid";
 
-export class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -12,7 +13,8 @@ export class App extends React.Component {
   }
 
   addTodo(todo) {
-    this.setState({ todos: [...this.state.todos, todo] });
+    const id = uuid.v4();
+    this.setState({ todos: [...this.state.todos, {...todo, id}] });
   }
 
   render() {

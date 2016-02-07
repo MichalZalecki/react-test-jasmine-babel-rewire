@@ -9,7 +9,8 @@ export class TodoItem extends React.Component {
   render() {
     return (
       <div id={this.props.id}>
-        {this.props.text}
+        <label >Id: {this.props.id}</label>
+        <p>{this.props.text}</p>
       </div>
     );
   }

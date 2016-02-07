@@ -8,7 +8,7 @@ export class TodoList extends React.Component {
 
   render() {
     return (
-      <ul>{this.getTodos()}</ul>
+      <ul className="todoList">{this.getTodos()}</ul>
     );
   }
 }

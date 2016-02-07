@@ -1,5 +1,4 @@
 import React from "react";
-import uuid from "node-uuid";
 
 export class TodoForm extends React.Component {
   static propTypes = {
@@ -9,20 +8,23 @@ export class TodoForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const text = this.refs.todoText.value;
-    const id = uuid.v4();
-    const todo = {text, id};
+    const todo = {text};
     this.props.addTodo(todo);
   }
 
   render() {
     return (
-      <form onSubmit={::this.handleSubmit}>
+      <form onSubmit={::this.handleSubmit} className="todoForm">
         <input
           type="text"
           name="todoText"
+          className="todoText"
           ref="todoText"
         />
-        <input type="submit"/>
+        <input
+          type="submit"
+          className="todoSubmit"
+        />
       </form>
     );
   }
