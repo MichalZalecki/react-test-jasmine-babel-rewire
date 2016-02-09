@@ -1,14 +1,15 @@
 import React from "react";
 import TestUtils, {Simulate} from "react-addons-test-utils";
 import {TodoItem} from "./todos/TodoItem";
-import App from "./App";
 
 describe("App component", () => {
 
   describe("full render", () => {
 
     it("should add todo", () => {
-      App.__Rewire__("uuid", { v4() { return "todo1" } });
+      const AppModule = require("./App");
+      AppModule.__Rewire__("uuid", { v4() { return "todo1" } });
+      const App = AppModule.App;
 
       const AppComponent = TestUtils.renderIntoDocument(<App />);
       const todoText = TestUtils.findRenderedDOMComponentWithClass(AppComponent, "todoText");

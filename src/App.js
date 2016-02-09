@@ -3,7 +3,7 @@ import {TodoForm} from "./todos/TodoForm";
 import {TodoList} from "./todos/TodoList";
 import uuid from "uuid";
 
-export default class App extends React.Component {
+export class App extends React.Component {
   constructor(props) {
     super(props);
 
