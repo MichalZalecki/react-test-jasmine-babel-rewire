@@ -1,31 +1,6 @@
-# React The Boring Part
+# react-test-jasmine-babel-rewire
 
-Setup for React apps. It's not going to force you to use any specyfic toolset/framework. Be free and make **your** choice. *React The Boring Part* is just a setup which allows you to develop and deploy app without pain. It's not a bare minimum, although I tried to keep things simple.
+When it comes to unit testing there is high possibility that you would like to mock some dependencies.
 
-## Scripts
-
-Start **Express** (for production)
-
-```bash
-npm start
-```
-
-Start **WebpackDevServer** (for development)
-
-```bash
-npm run dev
-```
-
-Build (also run in *postinstall*)
-
-```bash
-npm run build
-```
-
-## You aren't using React?
-
-Check out pure [EcmaScript 2016+ The Boring Part](https://github.com/MichalZalecki/react-the-boring-part/tree/pure-es) branch!
-
-## Are you testing with Karma and Webpack?
-
-Check out [Run tests with Karma and Webpack](https://github.com/MichalZalecki/react-the-boring-part/tree/karma-webpack) branch!
+**babel-plugin-rewire**
+It's a Babel plugin and has nothing to do with webpack inspired by rewire.js. The only working version for now is `1.0.0-beta-5`. I'd say it's quite good but rather unstable right now.
